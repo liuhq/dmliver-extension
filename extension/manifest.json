@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "DMLiver",
+  "description": "Open video/live from bilibili/Youtube, etc. with DMLive",
+  "version": "0.1.0",
+  "author": {
+    "name": "Horace Liu",
+    "url": "https://github.com/liuhq",
+    "email": "im.liuhq@gmail.com"
+  },
+  "icons": {
+    "48": "icons/revda.png"
+  },
+  "background": {
+    "service_worker": "service_worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "scripts/content.js"
+      ]
+    }
+  ],
+  "commands": {
+    "dmlive:play": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+P"
+      },
+      "description": "Open video/live from bilibili/Youtube, etc. with DMLive"
+    }
+  },
+  "permissions": [
+    "scripting",
+    "clipboardRead"
+  ]
+}
