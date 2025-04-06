@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "DMLiver",
   "description": "Open video/live from bilibili/Youtube, etc. with DMLive",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "Horace Liu",
     "url": "https://github.com/liuhq",

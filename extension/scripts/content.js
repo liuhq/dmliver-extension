@@ -41,12 +41,12 @@ function parseUrl(raw) {
     const dmliveProtocol = 'dmlive://' + dmliveParsed.hostname + dmliveParsed.pathname
 
     switch (true) {
-        case url.includes('bilibili.com'):
+        case raw.includes('bilibili.com'):
             return dmliveProtocol
                 + (dmliveParsed.searchParams.get('p')
                     ? '?p=' + dmliveParsed.searchParams.get('p')
                     : '')
-        case url.includes('youtube.com/watch'):
+        case raw.includes('youtube.com/watch'):
             return dmliveProtocol
                 + (dmliveParsed.searchParams.get('v')
                     ? '?v=' + dmliveParsed.searchParams.get('v')
